@@ -38,7 +38,7 @@ require_once( 'wp_mvc-1.0.0/init.php' );
 
 $portal_app = new \WpMvc\Application();
 
-$portal_app->init( WP_PLUGIN_DIR . '/portal' );
+$portal_app->init( 'Portal', WP_PLUGIN_DIR . '/portal' );
 
 // WP: Add pages
 add_action( "admin_menu", "portal_add_pages" );
