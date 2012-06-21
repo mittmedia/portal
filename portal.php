@@ -51,5 +51,5 @@ function portal_options_page()
 {
   global $portal_app;
   
-  $portal_app->option_controller->index();
+  $portal_app->options_controller->index();
 }
