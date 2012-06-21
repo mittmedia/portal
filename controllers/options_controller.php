@@ -9,7 +9,7 @@ namespace Portal
       global $site;
       global $theme_names;
 
-      $site = Site::find( 1 );
+      $site = \Site::find( 1 );
 
       $this->create_attribute_if_not_exists( $site, 'companyname' );
       $this->create_attribute_if_not_exists( $site, 'defaulttheme' );
