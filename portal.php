@@ -41,13 +41,13 @@ $portal_app = new \WpMvc\Application();
 $portal_app->init( 'Portal', WP_PLUGIN_DIR . '/portal' );
 
 // WP: Add pages
-add_action( "admin_menu", "portal_add_pages" );
+add_action( "network_admin_menu", "portal_add_pages" );
 function portal_add_pages()
 {
-  add_options_page( "Portal Options", "Portal", "Administrator", "portal_options_menu", "portal_options_page" );
+  add_submenu_page( 'settings.php', 'Portal Settings', 'Portal', 'Super Admin', 'portal_settings', 'portal_settings_page');
 }
 
-function portal_options_page()
+function portal_settings_page()
 {
   global $portal_app;
   
