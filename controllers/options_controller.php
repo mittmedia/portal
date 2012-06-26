@@ -23,6 +23,8 @@ namespace Portal
         $site->takes_post( $_POST['site'] );
 
         $site->save();
+
+        static::redirect_to( "{$_SERVER['REQUEST_URI']}&portal_updated=1" );
       }
 
       $this->get_theme_names( $theme_names );

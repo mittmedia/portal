@@ -53,3 +53,14 @@ function portal_settings_page()
   
   $portal_app->options_controller->index();
 }
+
+if ( isset( $_GET['portal_updated'] ) ) {
+  add_action( 'network_admin_notices', 'portal_updated_notice' );
+}
+
+function portal_updated_notice()
+{
+  $html = \WpMvc\ViewHelper::admin_notice( __( 'Settings saved.' ) );
+
+  echo $html;
+}
