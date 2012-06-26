@@ -35,7 +35,7 @@ namespace Portal
     private function create_attribute_if_not_exists( &$site, $attribute )
     {
       if ( ! isset( $site->sitemeta->{$attribute} ) ) {
-        $site->sitemeta->{$attribute} = SiteMeta::virgin();
+        $site->sitemeta->{$attribute} = \WpMvc\SiteMeta::virgin();
         $site->sitemeta->{$attribute}->site_id = $site->id;
         $site->sitemeta->{$attribute}->meta_key = "$attribute";
         $site->sitemeta->{$attribute}->meta_value = "";
