@@ -51,7 +51,7 @@ function portal_settings_page()
 {
   global $portal_app;
 
-  $portal_app->options_controller->index();
+  $portal_app->settings_controller->index();
 }
 
 if ( isset( $_GET['portal_updated'] ) ) {

@@ -2,7 +2,7 @@
 
 namespace Portal
 {
-  class OptionsController extends \WpMvc\BaseController
+  class SettingsController extends \WpMvc\BaseController
   {
     public function index()
     {
