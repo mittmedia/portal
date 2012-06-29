@@ -69,7 +69,7 @@
       'type' => 'select',
       'options' => $registration_options,
       'object' => $site->sitemeta->activate_registration,
-      'default_value' => \JoinPortal\SettingsHelper::activation_option_to_text( $site->sitemeta->activate_registration->meta_value ),
+      'default_value' => \Portal\SettingsHelper::activation_option_to_text( $site->sitemeta->activate_registration->meta_value ),
       'key' => 'meta_value'
     ),
     array(
