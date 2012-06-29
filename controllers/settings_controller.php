@@ -9,6 +9,7 @@ namespace Portal
       global $current_site;
       global $site;
       global $theme_names;
+      global $registration_options;
 
       $site = \WpMvc\Site::find( $current_site->id );
 
@@ -19,6 +20,8 @@ namespace Portal
       $this->create_attribute_if_not_exists( $site, 'companycontactname' );
       $this->create_attribute_if_not_exists( $site, 'companycontactphone' );
       $this->create_attribute_if_not_exists( $site, 'companycontactemail' );
+      $this->create_attribute_if_not_exists( $site, 'activate_registration', 'a' );
+      $this->create_attribute_if_not_exists( $site, 'welcome_text' );
 
       if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
         $site->takes_post( $_POST['site'] );
@@ -30,16 +33,22 @@ namespace Portal
 
       $this->get_theme_names( $theme_names );
 
+      $registration_options = array(
+        'a' => \Portal\SettingsHelper::activation_option_to_text( 'a' ),
+        'b' => \Portal\SettingsHelper::activation_option_to_text( 'b' ),
+        'c' => \Portal\SettingsHelper::activation_option_to_text( 'c' )
+      );
+
       $this->render( $this, "index" );
     }
 
-    private function create_attribute_if_not_exists( &$site, $attribute )
+    private function create_attribute_if_not_exists( &$site, $attribute, $value = null )
     {
       if ( ! isset( $site->sitemeta->{$attribute} ) ) {
         $site->sitemeta->{$attribute} = \WpMvc\SiteMeta::virgin();
         $site->sitemeta->{$attribute}->site_id = $site->id;
         $site->sitemeta->{$attribute}->meta_key = "$attribute";
-        $site->sitemeta->{$attribute}->meta_value = "";
+        $value ? $site->sitemeta->{$attribute}->meta_value = $value : $site->sitemeta->{$attribute}->meta_value = "";
         $site->sitemeta->{$attribute}->save();
       }
     }

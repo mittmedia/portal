@@ -1,4 +1,4 @@
-<?php global $site; global $theme_names; ?>
+<?php global $site; global $theme_names; global $registration_options; ?>
 
 <div class="wrap">
   <div id="icon-options-general" class="icon32"><br></div>
@@ -61,6 +61,23 @@
       'options' => $theme_names,
       'object' => $site->sitemeta->defaulttheme,
       'default_value' => $site->sitemeta->defaulttheme->meta_value,
+      'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Activate Registration',
+      'name' => $site->sitemeta->activate_registration->meta_key,
+      'type' => 'select',
+      'options' => $registration_options,
+      'object' => $site->sitemeta->activate_registration,
+      'default_value' => \JoinPortal\SettingsHelper::activation_option_to_text( $site->sitemeta->activate_registration->meta_value ),
+      'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Welcome Text',
+      'name' => $site->sitemeta->welcome_text->meta_key,
+      'type' => 'textarea',
+      'object' => $site->sitemeta->welcome_text,
+      'default_value' => $site->sitemeta->welcome_text->meta_value,
       'key' => 'meta_value'
     )
   );
