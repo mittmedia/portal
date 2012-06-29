@@ -6,10 +6,11 @@ namespace Portal
   {
     public function index()
     {
+      global $current_site;
       global $site;
       global $theme_names;
 
-      $site = \WpMvc\Site::find( 1 );
+      $site = \WpMvc\Site::find( $current_site->id );
 
       $this->create_attribute_if_not_exists( $site, 'companyname' );
       $this->create_attribute_if_not_exists( $site, 'defaulttheme' );
