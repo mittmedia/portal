@@ -47,10 +47,15 @@ namespace Portal
     {
       $themes = wp_get_themes();
 
+      $allowed_themes = \WpMvc\SiteMeta::find_by_meta_key( 'allowedthemes' );
+
+      $allowed_themes_unserialized = unserialize( $allowed_themes[0]->meta_value );
+
       $theme_names = array();
 
       foreach ( $themes as $theme_key => $theme_value ) {
-        array_push( $theme_names, $theme_key );
+        if ( in_array( $theme_key, array_keys( $allowed_themes_unserialized ) ) )
+          array_push( $theme_names, $theme_key );
       }
     }
   }
