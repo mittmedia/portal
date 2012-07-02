@@ -65,6 +65,12 @@ function portal_reset_registration() {
   $site->save();
 }
 
+add_action( 'before_signup_form', 'portal_show_registration_form' );
+function portal_show_registration_form()
+{
+  
+}
+
 if ( isset( $_GET['portal_updated'] ) ) {
   add_action( 'network_admin_notices', 'portal_updated_notice' );
 }
