@@ -7,6 +7,10 @@
 
   $content = array(
     array(
+      'title' => 'Company Information',
+      'type' => 'h3'
+    ),
+    array(
       'title' => 'Company Name',
       'name' => $site->sitemeta->companyname->meta_key,
       'type' => 'text',
@@ -47,12 +51,20 @@
       'key' => 'meta_value'
     ),
     array(
+      'title' => 'Portal Settings',
+      'type' => 'h3'
+    ),
+    array(
       'title' => 'Portal Start Page',
       'name' => $site->sitemeta->portalstartpage->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->portalstartpage,
       'default_value' => $site->sitemeta->portalstartpage->meta_value,
       'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Registration Settings',
+      'type' => 'h3'
     ),
     array(
       'title' => 'Default Theme',
