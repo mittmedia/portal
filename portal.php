@@ -54,6 +54,17 @@ function portal_settings_page()
   $portal_app->settings_controller->index();
 }
 
+add_action( 'init', 'portal_reset_registration' );
+function portal_reset_registration() {
+  global $current_site;
+
+  $site = \WpMvc\Site::find( $current_site->id );
+
+  $site->sitemeta->registration->meta_value = 'none';
+
+  $site->save();
+}
+
 if ( isset( $_GET['portal_updated'] ) ) {
   add_action( 'network_admin_notices', 'portal_updated_notice' );
 }
