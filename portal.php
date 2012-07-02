@@ -80,7 +80,9 @@ function portal_reset_registration_on_blog()
 add_action( 'before_signup_form', 'portal_show_registration_form' );
 function portal_show_registration_form()
 {
-  
+  global $portal_app;
+
+  $portal_app->registrations_controller->index();
 }
 
 if ( isset( $_GET['portal_updated'] ) ) {
