@@ -65,6 +65,18 @@ function portal_reset_registration() {
   $site->save();
 }
 
+add_action( 'init', 'portal_reset_registration_on_blog' );
+function portal_reset_registration_on_blog()
+{
+  global $current_blog;
+
+  $blog = \WpMvc\Blog::find( $current_blog->blog_id );
+
+  $blog->options->users_can_register = 0;
+
+  $blog->save();
+}
+
 add_action( 'before_signup_form', 'portal_show_registration_form' );
 function portal_show_registration_form()
 {
