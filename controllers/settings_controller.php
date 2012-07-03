@@ -13,13 +13,14 @@ namespace Portal
 
       $site = \WpMvc\Site::find( $current_site->id );
 
-      $this->create_attribute_if_not_exists( $site, 'companyname' );
-      $this->create_attribute_if_not_exists( $site, 'defaulttheme' );
-      $this->create_attribute_if_not_exists( $site, 'portalstartpage' );
-      $this->create_attribute_if_not_exists( $site, 'companywebsite' );
-      $this->create_attribute_if_not_exists( $site, 'companycontactname' );
-      $this->create_attribute_if_not_exists( $site, 'companycontactphone' );
-      $this->create_attribute_if_not_exists( $site, 'companycontactemail' );
+      $this->create_attribute_if_not_exists( $site, 'company_name' );
+      $this->create_attribute_if_not_exists( $site, 'default_theme' );
+      $this->create_attribute_if_not_exists( $site, 'portal_startpage' );
+      $this->create_attribute_if_not_exists( $site, 'company_website' );
+      $this->create_attribute_if_not_exists( $site, 'company_contact_name' );
+      $this->create_attribute_if_not_exists( $site, 'company_contact_phone' );
+      $this->create_attribute_if_not_exists( $site, 'company_contact_email' );
+      $this->create_attribute_if_not_exists( $site, 'company_alias' );
       $this->create_attribute_if_not_exists( $site, 'activate_registration', 'a' );
       $this->create_attribute_if_not_exists( $site, 'welcome_text' );
       $this->create_attribute_if_not_exists( $site, 'user_agreement' );

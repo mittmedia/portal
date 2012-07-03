@@ -12,42 +12,50 @@
     ),
     array(
       'title' => 'Company Name',
-      'name' => $site->sitemeta->companyname->meta_key,
+      'name' => $site->sitemeta->company_name->meta_key,
       'type' => 'text',
-      'object' => $site->sitemeta->companyname,
-      'default_value' => $site->sitemeta->companyname->meta_value,
+      'object' => $site->sitemeta->company_name,
+      'default_value' => $site->sitemeta->company_name->meta_value,
       'key' => 'meta_value'
     ),
     array(
       'title' => 'Company Website',
-      'name' => $site->sitemeta->companywebsite->meta_key,
+      'name' => $site->sitemeta->company_website->meta_key,
       'type' => 'text',
-      'object' => $site->sitemeta->companywebsite,
-      'default_value' => $site->sitemeta->companywebsite->meta_value,
+      'object' => $site->sitemeta->company_website,
+      'default_value' => $site->sitemeta->company_website->meta_value,
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Company Contact (Name)',
-      'name' => $site->sitemeta->companycontactname->meta_key,
+      'title' => 'Adm. Contact (Name)',
+      'name' => $site->sitemeta->company_contact_name->meta_key,
       'type' => 'text',
-      'object' => $site->sitemeta->companycontactname,
-      'default_value' => $site->sitemeta->companycontactname->meta_value,
+      'object' => $site->sitemeta->company_contact_name,
+      'default_value' => $site->sitemeta->company_contact_name->meta_value,
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Company Contact (Phone)',
-      'name' => $site->sitemeta->companycontactphone->meta_key,
+      'title' => 'Adm. Contact (Phone)',
+      'name' => $site->sitemeta->company_contact_phone->meta_key,
       'type' => 'text',
-      'object' => $site->sitemeta->companycontactphone,
-      'default_value' => $site->sitemeta->companycontactphone->meta_value,
+      'object' => $site->sitemeta->company_contact_phone,
+      'default_value' => $site->sitemeta->company_contact_phone->meta_value,
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Company Contact (E-mail)',
-      'name' => $site->sitemeta->companycontactemail->meta_key,
+      'title' => 'Adm. Contact (E-mail)',
+      'name' => $site->sitemeta->company_contact_email->meta_key,
       'type' => 'text',
-      'object' => $site->sitemeta->companycontactemail,
-      'default_value' => $site->sitemeta->companycontactemail->meta_value,
+      'object' => $site->sitemeta->company_contact_email,
+      'default_value' => $site->sitemeta->company_contact_email->meta_value,
+      'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Company Alias (Websafe)',
+      'name' => $site->sitemeta->company_alias->meta_key,
+      'type' => 'text',
+      'object' => $site->sitemeta->company_alias,
+      'default_value' => $site->sitemeta->company_alias->meta_value,
       'key' => 'meta_value'
     ),
     array(
@@ -56,10 +64,10 @@
     ),
     array(
       'title' => 'Portal Start Page',
-      'name' => $site->sitemeta->portalstartpage->meta_key,
+      'name' => $site->sitemeta->portal_startpage->meta_key,
       'type' => 'text',
-      'object' => $site->sitemeta->portalstartpage,
-      'default_value' => $site->sitemeta->portalstartpage->meta_value,
+      'object' => $site->sitemeta->portal_startpage,
+      'default_value' => $site->sitemeta->portal_startpage->meta_value,
       'key' => 'meta_value'
     ),
     array(
@@ -68,11 +76,11 @@
     ),
     array(
       'title' => 'Default Theme',
-      'name' => $site->sitemeta->defaulttheme->meta_key,
+      'name' => $site->sitemeta->default_theme->meta_key,
       'type' => 'select',
       'options' => $theme_names,
-      'object' => $site->sitemeta->defaulttheme,
-      'default_value' => $site->sitemeta->defaulttheme->meta_value,
+      'object' => $site->sitemeta->default_theme,
+      'default_value' => $site->sitemeta->default_theme->meta_value,
       'key' => 'meta_value'
     ),
     array(

@@ -15,7 +15,7 @@ namespace Portal
       $domain = 'http://' . $site->domain;
 
       $errors = array();
-      
+
       if ( isset( $_GET['step'] ) ) {
         switch ( $_GET['step'] ) {
           case '2':

@@ -85,6 +85,19 @@ function portal_show_registration_form()
   $portal_app->registrations_controller->index();
 }
 
+add_filter( 'body_class', 'portal_put_alias_as_body_class' );
+function portal_put_alias_as_body_class( $classes )
+{
+  global $current_site;
+
+  $site = \WpMvc\Site::find( $current_site->id );
+
+  if ( isset( $site->sitemeta->company_alias->meta_value ) )
+    $classes[] = $site->sitemeta->company_alias->meta_value;
+
+  return $classes;
+}
+
 if ( isset( $_GET['portal_updated'] ) ) {
   add_action( 'network_admin_notices', 'portal_updated_notice' );
 }
