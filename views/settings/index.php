@@ -56,6 +56,7 @@
       'type' => 'text',
       'object' => $site->sitemeta->company_alias,
       'default_value' => $site->sitemeta->company_alias->meta_value,
+      'description' => "It's used in the <body> of your themes and for advertisement.",
       'key' => 'meta_value'
     ),
     array(
