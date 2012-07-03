@@ -91,6 +91,7 @@
       'object' => $site->sitemeta->welcome_text,
       'default_value' => $site->sitemeta->welcome_text->meta_value,
       'key' => 'meta_value'
+
     ),
     array(
       'title' => 'User Agreement',
@@ -108,10 +109,7 @@
       'default_value' => $site->sitemeta->pul_agreement->meta_value,
       'key' => 'meta_value'
     )
-
   );
-
   \WpMvc\FormHelper::render_form( $site, $content );
-
   ?>
 </div>

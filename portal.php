@@ -34,14 +34,14 @@ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 */
 
-require_once( 'wp_mvc-1.0.0/init.php' );
+require_once( 'wp_mvc/init.php' );
 
 $portal_app = new \WpMvc\Application();
 
 $portal_app->init( 'Portal', WP_PLUGIN_DIR . '/portal' );
 
 // WP: Add pages
-add_action( "network_admin_menu", "portal_add_pages" );
+add_action( 'network_admin_menu', 'portal_add_pages' );
 function portal_add_pages()
 {
   add_submenu_page( 'settings.php', 'Portal Settings', 'Portal', 'Super Admin', 'portal_settings', 'portal_settings_page');
@@ -50,6 +50,48 @@ function portal_add_pages()
 function portal_settings_page()
 {
   global $portal_app;
-  
-  $portal_app->options_controller->index();
+
+  $portal_app->settings_controller->index();
+}
+
+add_action( 'init', 'portal_reset_registration' );
+function portal_reset_registration() {
+  global $current_site;
+
+  $site = \WpMvc\Site::find( $current_site->id );
+
+  $site->sitemeta->registration->meta_value = 'none';
+
+  $site->save();
+}
+
+add_action( 'init', 'portal_reset_registration_on_blog' );
+function portal_reset_registration_on_blog()
+{
+  global $current_blog;
+
+  $blog = \WpMvc\Blog::find( $current_blog->blog_id );
+
+  $blog->options->users_can_register = 0;
+
+  $blog->save();
+}
+
+add_action( 'before_signup_form', 'portal_show_registration_form' );
+function portal_show_registration_form()
+{
+  global $portal_app;
+
+  $portal_app->registrations_controller->index();
+}
+
+if ( isset( $_GET['portal_updated'] ) ) {
+  add_action( 'network_admin_notices', 'portal_updated_notice' );
+}
+
+function portal_updated_notice()
+{
+  $html = \WpMvc\ViewHelper::admin_notice( __( 'Settings saved.' ) );
+
+  echo $html;
 }
