@@ -1,11 +1,15 @@
-<?php global $site; global $theme_names; ?>
+<?php global $site; global $theme_names; global $registration_options; ?>
 
 <div class="wrap">
   <div id="icon-options-general" class="icon32"><br></div>
-  <h2><?php _e( 'Portal Options' ); ?></h2>
+  <h2><?php _e( 'Portal Settings' ); ?></h2>
   <?php
 
   $content = array(
+    array(
+      'title' => 'Company Information',
+      'type' => 'h3'
+    ),
     array(
       'title' => 'Company Name',
       'name' => $site->sitemeta->companyname->meta_key,
@@ -47,12 +51,20 @@
       'key' => 'meta_value'
     ),
     array(
+      'title' => 'Portal Settings',
+      'type' => 'h3'
+    ),
+    array(
       'title' => 'Portal Start Page',
       'name' => $site->sitemeta->portalstartpage->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->portalstartpage,
       'default_value' => $site->sitemeta->portalstartpage->meta_value,
       'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Registration Settings',
+      'type' => 'h3'
     ),
     array(
       'title' => 'Default Theme',
@@ -62,7 +74,41 @@
       'object' => $site->sitemeta->defaulttheme,
       'default_value' => $site->sitemeta->defaulttheme->meta_value,
       'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Activate Registration',
+      'name' => $site->sitemeta->activate_registration->meta_key,
+      'type' => 'select',
+      'options' => $registration_options,
+      'object' => $site->sitemeta->activate_registration,
+      'default_value' => \Portal\SettingsHelper::activation_option_to_text( $site->sitemeta->activate_registration->meta_value ),
+      'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'Welcome Text',
+      'name' => $site->sitemeta->welcome_text->meta_key,
+      'type' => 'textarea',
+      'object' => $site->sitemeta->welcome_text,
+      'default_value' => $site->sitemeta->welcome_text->meta_value,
+      'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'User Agreement',
+      'name' => $site->sitemeta->user_agreement->meta_key,
+      'type' => 'editor_textarea',
+      'object' => $site->sitemeta->user_agreement,
+      'default_value' => $site->sitemeta->user_agreement->meta_value,
+      'key' => 'meta_value'
+    ),
+    array(
+      'title' => 'PUL Agreement',
+      'name' => $site->sitemeta->pul_agreement->meta_key,
+      'type' => 'editor_textarea',
+      'object' => $site->sitemeta->pul_agreement,
+      'default_value' => $site->sitemeta->pul_agreement->meta_value,
+      'key' => 'meta_value'
     )
+
   );
 
   \WpMvc\FormHelper::render_form( $site, $content );
