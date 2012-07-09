@@ -27,6 +27,14 @@
       'key' => 'meta_value'
     ),
     array(
+      'title' => 'Company Logo',
+      'name' => $site->sitemeta->company_logo->meta_key,
+      'type' => 'file',
+      'object' => $site->sitemeta->company_logo,
+      'default_value' => $site->sitemeta->company_logo->meta_value,
+      'key' => 'meta_value'
+    ),
+    array(
       'title' => 'Adm. Contact (Name)',
       'name' => $site->sitemeta->company_contact_name->meta_key,
       'type' => 'text',

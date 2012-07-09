@@ -25,9 +25,16 @@ namespace Portal
       $this->create_attribute_if_not_exists( $site, 'welcome_text' );
       $this->create_attribute_if_not_exists( $site, 'user_agreement' );
       $this->create_attribute_if_not_exists( $site, 'pul_agreement' );
+      $this->create_attribute_if_not_exists( $site, 'company_logo' );
+      $this->create_attribute_if_not_exists( $site, 'company_logo_image' );
 
       if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+        if ( $_FILES['site']['name']['sitemeta']['company_logo']['meta_value'] )
+          $site->sitemeta->company_logo_image->meta_value = $_FILES['site']['name']['sitemeta']['company_logo']['meta_value'];
+
         $site->takes_post( $_POST['site'] );
+
+        die();
 
         $site->save();
 
