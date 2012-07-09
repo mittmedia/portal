@@ -30,7 +30,7 @@
             <?php endif; ?>
             <input type="text" name="registration[last_name]" value="<?php echo isset( $_POST['registration']['last_name'] ) ? $_POST['registration']['last_name'] : ''; ?>" style="<?php echo in_array( "Last Name Incorrect", $errors ) ? "pink" : ""; ?>;" />
           </div>
-          <div class="field">
+          <!--<div class="field">
             <label><?php _e( "Street Address" ); ?></label>
             <?php if ( in_array( "Street Address Incorrect", $errors ) ): ?>
               <p class="error"><?php _e( "Your street address didn't pass validation. Make sure it doesn't contain anything but letters and numbers." ); ?></p>
@@ -58,7 +58,7 @@
             <?php endif; ?>
             <p class="instruction"><?php _e( "Please fill in a mobile phone number where we can reach you." ); ?></p>
             <input type="text" name="registration[phone]" value="<?php echo isset( $_POST['registration']['phone'] ) ? $_POST['registration']['phone'] : ''; ?>" style="background: <?php echo in_array( "Mobile Phone Number Incorrect", $errors ) ? "pink" : ""; ?>;" />
-          </div>
+          </div>-->
           <div class="field">
             <label><?php _e( "E-Mail Address" ); ?></label>
             <?php if ( in_array( "E-Mail Address Incorrect", $errors ) ): ?>
