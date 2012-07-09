@@ -26,8 +26,15 @@ namespace Portal
             break;
         }
       } else {
+        $this->try_to_register();
+
         $this->render( $this, "signup_step_1" );
       }
+    }
+
+    private function try_to_register()
+    {
+      \WpMvc\DevHelper::dump( $_POST );
     }
   }
 }

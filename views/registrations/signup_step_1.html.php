@@ -9,7 +9,7 @@
         <p><i><?php _e( "Note that all fields are mandatory." ); ?></i></p>
       </div>
       <div class="form">
-        <?php $errors = array( "hejhopp" ); if ( count( $errors ) > 0 ): ?>
+        <?php if ( count( $errors ) > 0 ): ?>
           <div class="errors">
             <p class="error"><?php _e( "There are errors in the form. Please take a look in the form and correct it." ); ?></p>
           </div>
@@ -109,8 +109,8 @@
             <?php if ( in_array( "Terms & Conditions Not Accepted", $errors ) ): ?>
               <p class="error"><?php _e( "You have to accept our Terms & Conditions to register and use this service." ); ?></p>
             <?php endif; ?>
-            <input type="checkbox" id="registration_terms_and_conditions" name="registration[terms_and_conditions]" value="<?php echo $_POST['registration']['terms_and_conditions']; ?>" style="background: <?php echo in_array( "Terms & Conditions Not Accepted", $errors ) ? "pink" : ""; ?>;" />
-            <label for="terms"><?php _e( "I accept the Terms & Conditions" ); ?></label>
+            <input type="checkbox" id="registration_terms_and_conditions" name="registration[terms_and_conditions]" <?php echo isset( $_POST['registration']['terms_and_conditions'] ) ? "checked='checked'" : ""; ?> style="background: <?php echo in_array( "Terms & Conditions Not Accepted", $errors ) ? "pink" : ""; ?>;" />
+            <label for="registration_terms_and_conditions"><?php _e( "I accept the Terms & Conditions" ); ?></label>
           </div>
         </fieldset>
         <div class="field submit">

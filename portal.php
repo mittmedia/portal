@@ -108,3 +108,8 @@ function portal_updated_notice()
 
   echo $html;
 }
+
+add_action( 'wp_enqueue_scripts', 'portal_registrations_add_scripts_and_styles' );
+function portal_registrations_add_scripts_and_styles() {
+  wp_enqueue_style( 'portal_signup_style', WP_PLUGIN_URL . '/portal/assets/build/stylesheets/signup.css' );
+}
