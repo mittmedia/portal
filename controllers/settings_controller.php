@@ -52,7 +52,21 @@ namespace Portal
 
             move_uploaded_file( $_FILES['site']['tmp_name']['sitemeta']['company_logo']['meta_value'], $root . $dir . $file );
 
-            $site->sitemeta->company_logo->meta_value = $url . $dir . $file;
+            $resample_options = array(
+              "path" => $root . $dir,
+              "sample_filename" => $file,
+              "new_filename" => "comapny_logo_128.png",
+              "new_height" => 128,
+              "save_image" => true
+            );
+
+            for( $resample_options["new_height"] = 128 ; $resample_options["new_height"] >= 16 ; $resample_options["new_height"] *= 0.5)
+            {
+              $resample_options["new_filename"] = "comapny_logo_" . $resample_options["new_height"] . ".png";
+              \WpMvc\ImageHelper::resample_png( $resample_options );
+            }
+
+            $site->sitemeta->company_logo->meta_value = $url . $dir . "comapny_logo_128.png";
           }
         }
 
