@@ -5,6 +5,16 @@
   <h2><?php _e( 'Portal Settings' ); ?></h2>
   <?php
 
+  $logo_html = '';
+
+  if ( trim( $site->sitemeta->company_logo->meta_value ) != '' ) {
+    $logo_html = <<<html
+
+<img src='{$site->sitemeta->company_logo->meta_value}' alt='' />
+
+html;
+  }
+
   $content = array(
     array(
       'title' => 'Company Information',
@@ -32,7 +42,8 @@
       'type' => 'file',
       'object' => $site->sitemeta->company_logo,
       'default_value' => $site->sitemeta->company_logo->meta_value,
-      'key' => 'meta_value'
+      'key' => 'meta_value',
+      'description' => "$logo_html"
     ),
     array(
       'title' => 'Adm. Contact (Name)',

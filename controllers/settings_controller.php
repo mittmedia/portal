@@ -26,19 +26,43 @@ namespace Portal
       $this->create_attribute_if_not_exists( $site, 'user_agreement' );
       $this->create_attribute_if_not_exists( $site, 'pul_agreement' );
       $this->create_attribute_if_not_exists( $site, 'company_logo' );
-      $this->create_attribute_if_not_exists( $site, 'company_logo_image' );
+
+      $file_success = true;
 
       if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-        if ( $_FILES['site']['name']['sitemeta']['company_logo']['meta_value'] )
-          $site->sitemeta->company_logo_image->meta_value = $_FILES['site']['name']['sitemeta']['company_logo']['meta_value'];
+        if ( $_FILES['site']['size']['sitemeta']['company_logo']['meta_value'] > 0 ) {
+          $url = get_site_url();
+          $root = $_SERVER['DOCUMENT_ROOT'];
+          $dir = '/wp-content/uploads/portal/';
+          $file = 'company_logo.jpg';
+          $type = $_FILES['site']['type']['sitemeta']['company_logo']['meta_value'];
+
+          if ( $type != 'image/png' && $type != 'image/x-png' ) {
+            $html = \WpMvc\ViewHelper::admin_error( __( 'Wrong file format. Please use a PNG image. None of your settings were saved.' ) );
+
+            echo $html;
+
+            $file_success = false;
+          } else {
+            if ( ! is_dir( $root . $dir ) )
+              mkdir( $root . $dir );
+
+            if ( file_exists( $root . $dir . $file ) )
+              unlink( $root . $dir . $file );
+
+            move_uploaded_file( $_FILES['site']['tmp_name']['sitemeta']['company_logo']['meta_value'], $root . $dir . $file );
+
+            $site->sitemeta->company_logo->meta_value = $url . $dir . $file;
+          }
+        }
 
         $site->takes_post( $_POST['site'] );
 
-        die();
+        if ( $file_success ) {
+          $site->save();
 
-        $site->save();
-
-        static::redirect_to( "{$_SERVER['REQUEST_URI']}&portal_updated=1" );
+          static::redirect_to( "{$_SERVER['REQUEST_URI']}&portal_updated=1" );
+        }
       }
 
       $this->get_theme_names( $theme_names );
