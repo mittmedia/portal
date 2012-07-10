@@ -60,8 +60,7 @@ namespace Portal
               "save_image" => true
             );
 
-            for( $resample_options["new_height"] = 128 ; $resample_options["new_height"] >= 16 ; $resample_options["new_height"] *= 0.5)
-            {
+            for( $resample_options["new_height"] = 128; $resample_options["new_height"] >= 16; $resample_options["new_height"] *= 0.5 ) {
               $resample_options["new_filename"] = "comapny_logo_" . $resample_options["new_height"] . ".png";
               \WpMvc\ImageHelper::resample_png( $resample_options );
             }
