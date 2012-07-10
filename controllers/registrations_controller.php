@@ -71,8 +71,9 @@ namespace Portal
       if ( count( $errors ) == 0 ) {
         $user_id = $this->create_user( $blog_name, $password, $email );
         $blog_id = $this->create_blog( $blog_name, $user_id );
-        $this->update_user_meta( $user_id, $first_name, $last_name, $biography );
+        $this->update_user_meta( $user_id, $blog_id, $first_name, $last_name, $biography );
         $this->update_blog_options( $blog_id );
+        $this->send_confirmation_mail_to_user($blog_name, $password, $email);
       }
     }
 
@@ -92,13 +93,15 @@ namespace Portal
       return wpmu_create_blog( $current_site->domain, '/' . $blog_name . '/', $blog_name, $user_id, $meta, $current_site->id );
     }
 
-    private function update_user_meta( $user_id, $first_name, $last_name, $biography )
+    private function update_user_meta( $user_id, $blog_id, $first_name, $last_name, $biography )
     {
       $user = \WpMvc\User::find( $user_id );
 
       $user->usermeta->first_name->meta_value = $first_name;
       $user->usermeta->last_name->meta_value = $last_name;
       $user->usermeta->description->meta_value = $biography;
+      $user->usermeta->{"wp_{$blog_id}_capabilities"}->meta_value = 'a:1:{s:6:"editor";s:1:"1";}';
+      $user->usermeta->{"wp_{$blog_id}_user_level"}->meta_value = 7;
 
       $user->save();
     }
@@ -142,6 +145,46 @@ namespace Portal
       $blog->options->stylesheet->option_value = $theme_stylesheet;
 
       $blog->save();
+    }
+
+    private function send_confirmation_mail_to_user($blog_name, $password, $email)
+    {
+      global $current_site;
+
+      $domain = $current_site->domain;
+
+      $site = \WpMvc\Site::find($current_site->id);
+
+      $admin_email = $site->sitemeta->admin_email->meta_value;
+
+      $message = sprintf(
+        __("Hej! Din blogg på %s har skapats. Du kan logga in på %s/%s/wp-admin med följande inloggningsuppgifter:\r\n\r\nAnvändarnamn: %s\r\nLösenord: %s\r\n\r\nOBS! Vi råder dig starkt att byta lösenord första gången du loggar in.\r\n\r\nLycka till med ditt bloggande! Om något skulle gå snett kan du kontakta %s."),
+        $domain,
+        'http://' . $domain,
+        $blog_name,
+        $blog_name,
+        $password,
+        $admin_email
+      );
+
+      wp_mail(
+        $email,
+        __(
+          'Din blogg är redo!'
+        ),
+        $message
+      );
+
+      wp_mail(
+        $admin_email ? $admin_email : 'dmu@mittmedia.se',
+        sprintf(
+          __(
+            'En blogg har registrerats'
+          ),
+          $_POST['name']
+        ),
+        "En blogg har registrerats. Användaren fick det här meddelandet:\r\n\r\n" . $message
+      );
     }
   }
 }
