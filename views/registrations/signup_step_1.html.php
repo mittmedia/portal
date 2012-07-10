@@ -18,17 +18,17 @@
           <legend><?php _e( "Information about you (these are not public)" ); ?></legend>
           <div class="field">
             <label><?php _e( "First Name" ); ?></label>
-            <?php if ( in_array( "First name incorrect", $errors ) ): ?>
+            <?php if ( in_array( "First Name Incorrect", $errors ) ): ?>
               <p class="error"><?php _e( "Your first name didn't pass validation. Make sure it doesn't contain anything but letters. And also, spaces are not allowed." ); ?></p>
             <?php endif; ?>
-            <input type="text" name="registration[first_name]" value="<?php echo isset( $_POST['registration']['first_name'] ) ? $_POST['registration']['first_name'] : ''; ?>" style="<?php echo in_array( "First Name Incorrect", $errors ) ? "pink" : ""; ?>;" />
+            <input type="text" name="registration[first_name]" value="<?php echo isset( $_POST['registration']['first_name'] ) ? $_POST['registration']['first_name'] : ''; ?>" style="background: <?php echo in_array( "First Name Incorrect", $errors ) ? "pink" : ""; ?>;" />
           </div>
           <div class="field">
             <label><?php _e( "Last Name" ); ?></label>
-            <?php if ( in_array( "Last name incorrect", $errors ) ): ?>
+            <?php if ( in_array( "Last Name Incorrect", $errors ) ): ?>
               <p class="error"><?php _e( "Your last name didn't pass validation. Make sure it doesn't contain anything but letters. And also, spaces are not allowed." ); ?></p>
             <?php endif; ?>
-            <input type="text" name="registration[last_name]" value="<?php echo isset( $_POST['registration']['last_name'] ) ? $_POST['registration']['last_name'] : ''; ?>" style="<?php echo in_array( "Last Name Incorrect", $errors ) ? "pink" : ""; ?>;" />
+            <input type="text" name="registration[last_name]" value="<?php echo isset( $_POST['registration']['last_name'] ) ? $_POST['registration']['last_name'] : ''; ?>" style="background: <?php echo in_array( "Last Name Incorrect", $errors ) ? "pink" : ""; ?>;" />
           </div>
           <!--<div class="field">
             <label><?php _e( "Street Address" ); ?></label>
@@ -64,11 +64,11 @@
             <?php if ( in_array( "E-Mail Address Incorrect", $errors ) ): ?>
               <p class="error"><?php _e( "Your e-mail address didn't pass validation. Please make sure it's a valid e-mail address." ); ?></p>
             <?php endif; ?>
-            <?php if ( in_array( "E-mail Not Unique", $errors ) ): ?>
+            <?php if ( in_array( "E-Mail Address Not Unique", $errors ) ): ?>
               <p class="error"><?php _e( "The e-mail address you gave us is already registered with another blog." ); ?></p>
             <?php endif; ?>
             <p class="instruction"><?php _e( "Please fill in an e-mail where we can reach you. We'll send a confirmation e-mail with a code to it, so it must be a real e-mail address you have access to." ); ?></p>
-            <input type="text" name="registration[email]" value="<?php echo isset( $_POST['registration']['email'] ) ? $_POST['registration']['email'] : ''; ?>" style="background: <?php echo ( in_array( "E-Mail Address Incorrect", $errors ) || in_array( "E-mail Not Unique", $errors ) ) ? "pink" : ""; ?>;" />
+            <input type="text" name="registration[email]" value="<?php echo isset( $_POST['registration']['email'] ) ? $_POST['registration']['email'] : ''; ?>" style="background: <?php echo ( in_array( "E-Mail Address Incorrect", $errors ) || in_array( "E-Mail Address Not Unique", $errors ) ) ? "pink" : ""; ?>;" />
           </div>
         </fieldset>
         <fieldset>
