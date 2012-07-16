@@ -158,7 +158,7 @@ namespace Portal
       $admin_email = $site->sitemeta->admin_email->meta_value;
 
       $message = sprintf(
-        __("Hej! Din blogg på %s har skapats. Du kan logga in på %s/%s/wp-admin med följande inloggningsuppgifter:\r\n\r\nAnvändarnamn: %s\r\nLösenord: %s\r\n\r\nOBS! Vi råder dig starkt att byta lösenord första gången du loggar in.\r\n\r\nLycka till med ditt bloggande! Om något skulle gå snett kan du kontakta %s."),
+        __("Hi! Your blog over at %s was created. You may log in on %s/%s/wp-admin with the following credentials:\r\n\r\nUsername: %s\r\nPassword: %s\r\n\r\nPlease note! We strongly advice you to change the password upon your first login.\r\n\r\nGood luck with your blogging! In case anything were to break, please contact %s.", 'portal-settings'),
         $domain,
         'http://' . $domain,
         $blog_name,
@@ -169,21 +169,20 @@ namespace Portal
 
       wp_mail(
         $email,
-        __(
-          'Din blogg är redo!'
-        ),
+        __('Your blog is ready!', 'portal-settings'),
         $message
       );
 
       wp_mail(
         $admin_email ? $admin_email : 'dmu@mittmedia.se',
         sprintf(
-          __(
-            'En blogg har registrerats'
-          ),
+          __('A new blog was created'),
           $_POST['name']
         ),
-        "En blogg har registrerats. Användaren fick det här meddelandet:\r\n\r\n" . $message
+        sprintf(
+          __("A new blog was created. The user got this message from us:\r\n\r\n%s", 'portal-settings'),
+          $message
+        )
       );
     }
   }

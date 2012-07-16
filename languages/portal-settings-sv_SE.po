@@ -1,0 +1,300 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Portal Settings\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-16 11:26+0100\n"
+"PO-Revision-Date: 2012-07-16 11:27+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../portal.php:109
+msgid "Settings saved."
+msgstr "Inställningarna sparades."
+
+#: ../controllers/registrations_controller.php:161
+#, php-format
+msgid ""
+"Hi! Your blog over at %s was created. You may log in on %s/%s/wp-admin with the following credentials:\r\n"
+"\r\n"
+"Username: %s\r\n"
+"Password: %s\r\n"
+"\r\n"
+"Please note! We strongly advice you to change the password upon your first login.\r\n"
+"\r\n"
+"Good luck with your blogging! In case anything were to break, please contact %s."
+msgstr ""
+"Hej! Din blogg på %s har skapats! Du kan logga in på %s/%s/wp-admin med följande inloggningsuppgifter:\r\n"
+"\r\n"
+"Användarnamn: %s\r\n"
+"Lösenord: %s\r\n"
+"\r\n"
+"OBS! Vi rekommenderar starkt att du byter ditt lösenord efter din första inloggning.\r\n"
+"\r\n"
+"Lycka till med bloggandet! Om någonting går sönder, vänligen kontakta %s."
+
+#: ../controllers/registrations_controller.php:172
+msgid "Your blog is ready!"
+msgstr "Din blogg är redo!"
+
+#: ../controllers/registrations_controller.php:179
+msgid "A new blog was created"
+msgstr "En ny blogg skapades"
+
+#: ../controllers/registrations_controller.php:183
+#, php-format
+msgid ""
+"A new blog was created. The user got this message from us:\r\n"
+"\r\n"
+"%s"
+msgstr ""
+"En ny blogg skapades. Användaren fick följande meddelande från oss:\r\n"
+"\r\n"
+"%s"
+
+#: ../controllers/settings_controller.php:41
+msgid "Wrong file format. Please use a PNG image. None of your settings were saved."
+msgstr "Fel filformat. Vänligen ladda upp en PNG-bild. Inga övriga inställningar sparades."
+
+#: ../views/registrations/signup_step_1.html.php:6
+msgid "We need to know who you are"
+msgstr "Vi måste veta mer om vem du är"
+
+#: ../views/registrations/signup_step_1.html.php:8
+msgid "All you need to do is to fill in the form."
+msgstr "Allt du behöver göra är att fylla i formuläret."
+
+#: ../views/registrations/signup_step_1.html.php:9
+msgid "Note that all fields are mandatory."
+msgstr "Alla fält är obligatoriska."
+
+#: ../views/registrations/signup_step_1.html.php:14
+msgid "There are errors in the form. Please take a look in the form and correct it."
+msgstr "Det finns fel i formuläret. Vänligen ta en titt och rätta de fel som uppstått innan du fortsätter."
+
+#: ../views/registrations/signup_step_1.html.php:18
+msgid "Information about you (these are not public)"
+msgstr "Uppgifter om dig (de är inte publika)"
+
+#: ../views/registrations/signup_step_1.html.php:20
+msgid "First Name"
+msgstr "Förnamn"
+
+#: ../views/registrations/signup_step_1.html.php:22
+msgid "Your first name didn't pass validation. Make sure it doesn't contain anything but letters. And also, spaces are not allowed."
+msgstr "Ditt förnamn gick inte igenom valideringen. Se till att det inte innehåller något förutom alfabetiska tecken. Mellanslag är inte tillåtna."
+
+#: ../views/registrations/signup_step_1.html.php:27
+msgid "Last Name"
+msgstr "Efternamn"
+
+#: ../views/registrations/signup_step_1.html.php:29
+msgid "Your last name didn't pass validation. Make sure it doesn't contain anything but letters. And also, spaces are not allowed."
+msgstr "Ditt efternamn gick inte igenom valideringen. Se till att det inte innehåller något förutom alfabetiska tecken. Mellanslag är inte tillåtna."
+
+#: ../views/registrations/signup_step_1.html.php:34
+msgid "Street Address"
+msgstr "Gatuadress"
+
+#: ../views/registrations/signup_step_1.html.php:36
+msgid "Your street address didn't pass validation. Make sure it doesn't contain anything but letters and numbers."
+msgstr "Din gatuadress gick inte igenom valideringen. Se till att det inte innehåller något förutom alfabetiska tecken."
+
+#: ../views/registrations/signup_step_1.html.php:41
+msgid "Postal Code"
+msgstr "Postnummer"
+
+#: ../views/registrations/signup_step_1.html.php:43
+msgid "Your postal code didn't pass validation. Make sure it doesn't contain anything but numbers."
+msgstr "Ditt postnummer gick inte igenom valideringen. Se till att det inte innehåller något förutom siffror."
+
+#: ../views/registrations/signup_step_1.html.php:48
+msgid "City"
+msgstr "Ort"
+
+#: ../views/registrations/signup_step_1.html.php:50
+msgid "Your city didn't pass validation. Make sure it doesn't contain anything but letters."
+msgstr "Din ort gick inte igenom valideringen. Se till att det inte innehåller något förutom alfabetiska tecken."
+
+#: ../views/registrations/signup_step_1.html.php:55
+msgid "Mobile Phone Number"
+msgstr "Mobilnummer"
+
+#: ../views/registrations/signup_step_1.html.php:57
+msgid "Your mobile phone number didn't pass validation. Make sure it doesn't contain anything but numbers."
+msgstr "Ditt mobilnummer gick inte igenom valideringen. Se till att det inte innehåller något förutom siffror."
+
+#: ../views/registrations/signup_step_1.html.php:59
+msgid "Please fill in a mobile phone number where we can reach you."
+msgstr "Vänligen fyll i ett telefonnummer (mobil) där vi kan nå dig."
+
+#: ../views/registrations/signup_step_1.html.php:63
+msgid "E-Mail Address"
+msgstr "E-post"
+
+#: ../views/registrations/signup_step_1.html.php:65
+msgid "Your e-mail address didn't pass validation. Please make sure it's a valid e-mail address."
+msgstr "Din e-post gick inte igenom valideringen. Se till att det är en riktig e-postadress som du har tillgång till, det är nämligen hit vi skickar dina inloggningsuppgifter."
+
+#: ../views/registrations/signup_step_1.html.php:68
+msgid "The e-mail address you gave us is already registered with another blog."
+msgstr "E-postadressen du valde används redan på en annan blogg."
+
+#: ../views/registrations/signup_step_1.html.php:70
+msgid "Please fill in an e-mail where we can reach you. We'll send a confirmation e-mail with a code to it, so it must be a real e-mail address you have access to."
+msgstr "Vänligen fyll i en e-postadress där vi kan nå dig."
+
+#: ../views/registrations/signup_step_1.html.php:75
+msgid "Information about the blog (these are public)"
+msgstr "Uppgifter om bloggen (de är publika)"
+
+#: ../views/registrations/signup_step_1.html.php:77
+msgid "Blog Name"
+msgstr "Bloggens namn"
+
+#: ../views/registrations/signup_step_1.html.php:79
+msgid "Your blog name didn't pass validation. Make sure you only use letters and numbers. Spaces are not allowed."
+msgstr "Det valda bloggnamnet gick inte igenom valideringen. Se till att det inte innehåller något förutom alfabetiska tecken och siffror. Mellanslag är inte tillåtna."
+
+#: ../views/registrations/signup_step_1.html.php:82
+msgid "The blog name you wanted is already in use by another blog."
+msgstr "Bloggnamnet du valde används redan av en annan blogg. Välj ett nytt."
+
+#: ../views/registrations/signup_step_1.html.php:84
+msgid "You can only use letters and numbers. Spaces are not allowed."
+msgstr "Du kan bara använda alfabetiska tecken och siffror. Mellanslag är inte tillåtna."
+
+#: ../views/registrations/signup_step_1.html.php:88
+msgid "Tell us more! (Biography)"
+msgstr "Berätta mer! (Biografi och/eller beskrivning)"
+
+#: ../views/registrations/signup_step_1.html.php:90
+msgid "Your biography didn't pass validation. Maybe it's too short, or you used characters that our system can't handle."
+msgstr "Din biografi/beskrivning gick inte igenom valideringen. Se till så att den inte är för kort, eller att du använde några konstiga tecken."
+
+#: ../views/registrations/signup_step_1.html.php:92
+msgid "You can tell us your life story or your life story in short. Please write a little bit about what subjects your blog will touch as well."
+msgstr "Du kan berätta din livshistoria eller din livshistoria i korthet. Skriv lite om vilka ämnen din blogg kommer att behandla också!"
+
+#: ../views/registrations/signup_step_1.html.php:97
+msgid "Terms & Conditions"
+msgstr "Användarvillkor"
+
+#: ../views/registrations/signup_step_1.html.php:99
+msgid "In order to blog with us you have to accept our terms and our conditions. Some of our more general terms are:"
+msgstr "För att få blogga hos oss måste du acceptera våra användarvillkor. Några av våra generella regler är:"
+
+#: ../views/registrations/signup_step_1.html.php:101
+msgid "You are responsible for your own writings and the files (i.e. pictures) you publish. You are also responsible for comments that people write and you approve to be published."
+msgstr "Du är själv ansvarig för det du skriver och de filer (t.ex. bilder) som du laddar upp. Du är också ansvarig för kommentarer som andra skriver som du godkänner och publicerar."
+
+#: ../views/registrations/signup_step_1.html.php:102
+msgid "You may not write or publish files that is prohibited by law."
+msgstr "Du får inte skriva saker eller publicera filer som på något sätt går emot svensk lag."
+
+#: ../views/registrations/signup_step_1.html.php:103
+msgid "You have full copyright on the content you publish."
+msgstr "Du har fullständiga rättigheter till det du publicerar."
+
+#: ../views/registrations/signup_step_1.html.php:104
+msgid "Behave nicely."
+msgstr "Uppträd schysst."
+
+#: ../views/registrations/signup_step_1.html.php:105
+msgid "If you break our rules, terms or conditions we have the right to cancel the account without notice."
+msgstr "Om du bryter några av reglerna eller användarvillkoren har vi rätt att avsluta ditt konto utan förvarning."
+
+#: ../views/registrations/signup_step_1.html.php:107
+msgid "Read our Terms & Conditions in full"
+msgstr "Läs användarvillkoren i sin helhet (rekommenderat!)"
+
+#: ../views/registrations/signup_step_1.html.php:108
+msgid "Read about how we keep and use personal data."
+msgstr "Läs om hur vi hanterar dina personuppgifter (Personuppgiftslagen)"
+
+#: ../views/registrations/signup_step_1.html.php:110
+msgid "You have to accept our Terms & Conditions to register and use this service."
+msgstr "Du måste acceptera våra användarvillkor för att få registrera dig och använda den här tjänsten."
+
+#: ../views/registrations/signup_step_1.html.php:113
+msgid "I accept the Terms & Conditions"
+msgstr "Jag accepterar användarvillkoren"
+
+#: ../views/registrations/signup_step_1.html.php:117
+msgid "Register"
+msgstr "Registrera"
+
+#: ../views/settings/index.html.php:5
+#: ../views/settings/index.html.php:82
+msgid "Portal Settings"
+msgstr "Portalinställningar"
+
+#: ../views/settings/index.html.php:20
+msgid "Company Information"
+msgstr "Information om företaget"
+
+#: ../views/settings/index.html.php:24
+msgid "Company Name"
+msgstr "Företagsnamn"
+
+#: ../views/settings/index.html.php:32
+msgid "Company Website"
+msgstr "Företagswebb"
+
+#: ../views/settings/index.html.php:40
+msgid "Company Logo"
+msgstr "Företagslogotyp"
+
+#: ../views/settings/index.html.php:49
+msgid "Adm. Contact (Name)"
+msgstr "Adm. kontakt (Namn)"
+
+#: ../views/settings/index.html.php:57
+msgid "Adm. Contact (Phone)"
+msgstr "Adm. kontakt (Telefon)"
+
+#: ../views/settings/index.html.php:65
+msgid "Adm. Contact (E-mail)"
+msgstr "Adm. kontakt (E-post)"
+
+#: ../views/settings/index.html.php:73
+msgid "Company Alias (Websafe)"
+msgstr "Företagsalias (webbsäkert)"
+
+#: ../views/settings/index.html.php:78
+msgid "It's used in the <body> of your themes and for advertisement."
+msgstr "Används i &lt;body&gt;-taggen i deina teman, och för annonsering."
+
+#: ../views/settings/index.html.php:86
+msgid "Portal Start Page"
+msgstr "Startsida"
+
+#: ../views/settings/index.html.php:94
+msgid "Registration Settings"
+msgstr "Inställningar för nyregistreringar"
+
+#: ../views/settings/index.html.php:98
+msgid "Default Theme"
+msgstr "Förvalt tema"
+
+#: ../views/settings/index.html.php:107
+msgid "Activate Registration"
+msgstr "Aktivera nyregistreringar"
+
+#: ../views/settings/index.html.php:116
+msgid "Welcome Text"
+msgstr "Välkomsttext"
+
+#: ../views/settings/index.html.php:125
+msgid "User Agreement"
+msgstr "Användarvillkor"
+
+#: ../views/settings/index.html.php:133
+msgid "PUL Agreement"
+msgstr "PUL-villkor"
+

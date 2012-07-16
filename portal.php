@@ -40,6 +40,8 @@ $portal_app = new \WpMvc\Application();
 
 $portal_app->init( 'Portal', WP_PLUGIN_DIR . '/portal' );
 
+load_plugin_textdomain('portal-settings', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+
 // WP: Add pages
 add_action( 'network_admin_menu', 'portal_add_pages' );
 function portal_add_pages()

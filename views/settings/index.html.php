@@ -2,7 +2,7 @@
 
 <div class="wrap">
   <div id="icon-options-general" class="icon32"><br></div>
-  <h2><?php _e( 'Portal Settings' ); ?></h2>
+  <h2><?php _e( 'Portal Settings', 'portal-settings' ); ?></h2>
   <?php
 
   $logo_html = '';
@@ -17,11 +17,11 @@ html;
 
   $content = array(
     array(
-      'title' => 'Company Information',
+      'title' => __('Company Information', 'portal-settings'),
       'type' => 'h3'
     ),
     array(
-      'title' => 'Company Name',
+      'title' => __('Company Name', 'portal-settings'),
       'name' => $site->sitemeta->company_name->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->company_name,
@@ -29,7 +29,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Company Website',
+      'title' => __('Company Website', 'portal-settings'),
       'name' => $site->sitemeta->company_website->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->company_website,
@@ -37,7 +37,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Company Logo',
+      'title' => __('Company Logo', 'portal-settings'),
       'name' => $site->sitemeta->company_logo->meta_key,
       'type' => 'file',
       'object' => $site->sitemeta->company_logo,
@@ -46,7 +46,7 @@ html;
       'description' => "$logo_html"
     ),
     array(
-      'title' => 'Adm. Contact (Name)',
+      'title' => __('Adm. Contact (Name)', 'portal-settings'),
       'name' => $site->sitemeta->company_contact_name->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->company_contact_name,
@@ -54,7 +54,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Adm. Contact (Phone)',
+      'title' => __('Adm. Contact (Phone)', 'portal-settings'),
       'name' => $site->sitemeta->company_contact_phone->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->company_contact_phone,
@@ -62,7 +62,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Adm. Contact (E-mail)',
+      'title' => __('Adm. Contact (E-mail)', 'portal-settings'),
       'name' => $site->sitemeta->company_contact_email->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->company_contact_email,
@@ -70,20 +70,20 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Company Alias (Websafe)',
+      'title' => __('Company Alias (Websafe)', 'portal-settings'),
       'name' => $site->sitemeta->company_alias->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->company_alias,
       'default_value' => $site->sitemeta->company_alias->meta_value,
-      'description' => "It's used in the <body> of your themes and for advertisement.",
+      'description' => __("It's used in the <body> of your themes and for advertisement.", 'portal-settings'),
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Portal Settings',
+      'title' => __('Portal Settings', 'portal-settings'),
       'type' => 'h3'
     ),
     array(
-      'title' => 'Portal Start Page',
+      'title' => __('Portal Start Page', 'portal-settings'),
       'name' => $site->sitemeta->portal_startpage->meta_key,
       'type' => 'text',
       'object' => $site->sitemeta->portal_startpage,
@@ -91,11 +91,11 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Registration Settings',
+      'title' => __('Registration Settings', 'portal-settings'),
       'type' => 'h3'
     ),
     array(
-      'title' => 'Default Theme',
+      'title' => __('Default Theme', 'portal-settings'),
       'name' => $site->sitemeta->default_theme->meta_key,
       'type' => 'select',
       'options' => $theme_names,
@@ -104,7 +104,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Activate Registration',
+      'title' => __('Activate Registration', 'portal-settings'),
       'name' => $site->sitemeta->activate_registration->meta_key,
       'type' => 'select',
       'options' => $registration_options,
@@ -113,7 +113,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'Welcome Text',
+      'title' => __('Welcome Text', 'portal-settings'),
       'name' => $site->sitemeta->welcome_text->meta_key,
       'type' => 'textarea',
       'object' => $site->sitemeta->welcome_text,
@@ -122,7 +122,7 @@ html;
 
     ),
     array(
-      'title' => 'User Agreement',
+      'title' => __('User Agreement', 'portal-settings'),
       'name' => $site->sitemeta->user_agreement->meta_key,
       'type' => 'editor_textarea',
       'object' => $site->sitemeta->user_agreement,
@@ -130,7 +130,7 @@ html;
       'key' => 'meta_value'
     ),
     array(
-      'title' => 'PUL Agreement',
+      'title' => __('PUL Agreement', 'portal-settings'),
       'name' => $site->sitemeta->pul_agreement->meta_key,
       'type' => 'editor_textarea',
       'object' => $site->sitemeta->pul_agreement,
