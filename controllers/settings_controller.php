@@ -44,8 +44,10 @@ namespace Portal
 
             $file_success = false;
           } else {
-            if ( ! is_dir( $root . $dir ) )
+            if ( ! is_dir( $root . $dir ) ) {
               mkdir( $root . $dir );
+              chmod($root . $dir, 0755);
+            }
 
             if ( file_exists( $root . $dir . $file ) )
               unlink( $root . $dir . $file );

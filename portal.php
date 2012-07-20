@@ -111,7 +111,9 @@ function portal_updated_notice()
   echo $html;
 }
 
-add_action( 'wp_enqueue_scripts', 'portal_registrations_add_scripts_and_styles' );
+add_filter('admin_head', 'portal_registrations_add_scripts_and_styles');
 function portal_registrations_add_scripts_and_styles() {
-  wp_enqueue_style( 'portal_signup_style', WP_PLUGIN_URL . '/portal/assets/build/stylesheets/signup.css' );
+  if (isset( $_GET['page'] ) && $_GET['page'] == 'portal_settings') {
+    echo '<link rel="stylesheet" type="text/css" href="' . WP_PLUGIN_URL . '/portal/assets/build/stylesheets/signup.css' . '" />';
+  }
 }

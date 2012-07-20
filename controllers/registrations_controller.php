@@ -177,7 +177,7 @@ namespace Portal
         $admin_email ? $admin_email : 'dmu@mittmedia.se',
         sprintf(
           __('A new blog was created'),
-          $_POST['name']
+          $blog_name
         ),
         sprintf(
           __("A new blog was created. The user got this message from us:\r\n\r\n%s", 'portal-settings'),
