@@ -25,11 +25,12 @@ namespace Portal
       $this->create_attribute_if_not_exists( $site, 'welcome_text' );
       $this->create_attribute_if_not_exists( $site, 'user_agreement' );
       $this->create_attribute_if_not_exists( $site, 'pul_agreement' );
+      $this->create_attribute_if_not_exists( $site, 'terms_version' );
       $this->create_attribute_if_not_exists( $site, 'company_logo' );
 
       $file_success = true;
 
-      if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+      if ( $_SERVER['REQUEST_METHOD'] == 'POST' && isset( $_GET['page'] ) && $_GET['page'] == 'portal_settings' ) {
         if ( $_FILES['site']['size']['sitemeta']['company_logo']['meta_value'] > 0 ) {
           $url = get_site_url();
           $root = $_SERVER['DOCUMENT_ROOT'];

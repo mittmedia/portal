@@ -136,6 +136,14 @@ html;
       'object' => $site->sitemeta->pul_agreement,
       'default_value' => $site->sitemeta->pul_agreement->meta_value,
       'key' => 'meta_value'
+    ),
+    array(
+      'title' => __('Agreement Version', 'portal-settings'),
+      'name' => $site->sitemeta->terms_version->meta_key,
+      'type' => 'text',
+      'object' => $site->sitemeta->terms_version,
+      'default_value' => $site->sitemeta->terms_version->meta_value,
+      'key' => 'meta_value'
     )
   );
   \WpMvc\FormHelper::render_form( $site, $content );
