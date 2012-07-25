@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portal Settings\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-23 14:16+0100\n"
-"PO-Revision-Date: 2012-07-23 14:17+0100\n"
+"POT-Creation-Date: 2012-07-24 13:48+0100\n"
+"PO-Revision-Date: 2012-07-24 13:48+0100\n"
 "Last-Translator: Fredrik Sundström <fredrik.sundstrom@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -274,31 +274,35 @@ msgstr "Används i &lt;body&gt;-taggen i deina teman, och för annonsering."
 msgid "Portal Start Page"
 msgstr "Startsida"
 
-#: ../views/settings/index.html.php:94
+#: ../views/settings/index.html.php:92
+msgid "Specify the address with protocol but without the trailing slash, like so: http://myportal.example.com"
+msgstr "Ange adressen med protokoll men utan det avslutande snedstreckt, såhär: http://myportal.example.com"
+
+#: ../views/settings/index.html.php:95
 msgid "Registration Settings"
 msgstr "Inställningar för nyregistreringar"
 
-#: ../views/settings/index.html.php:98
+#: ../views/settings/index.html.php:99
 msgid "Default Theme"
 msgstr "Förvalt tema"
 
-#: ../views/settings/index.html.php:107
+#: ../views/settings/index.html.php:108
 msgid "Activate Registration"
 msgstr "Aktivera nyregistreringar"
 
-#: ../views/settings/index.html.php:116
+#: ../views/settings/index.html.php:117
 msgid "Welcome Text"
 msgstr "Välkomsttext"
 
-#: ../views/settings/index.html.php:125
+#: ../views/settings/index.html.php:126
 msgid "User Agreement"
 msgstr "Användarvillkor"
 
-#: ../views/settings/index.html.php:133
+#: ../views/settings/index.html.php:134
 msgid "PUL Agreement"
 msgstr "PUL-villkor"
 
-#: ../views/settings/index.html.php:141
+#: ../views/settings/index.html.php:142
 msgid "Agreement Version"
 msgstr "Version av villkor"
 
