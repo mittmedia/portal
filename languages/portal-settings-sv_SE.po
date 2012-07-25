@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Portal Settings\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-24 13:48+0100\n"
-"PO-Revision-Date: 2012-07-24 13:48+0100\n"
+"POT-Creation-Date: 2012-07-25 15:06+0100\n"
+"PO-Revision-Date: 2012-07-25 15:07+0100\n"
 "Last-Translator: Fredrik Sundström <fredrik.sundstrom@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -13,7 +13,11 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../portal.php:109
+#: ../portal.php:62
+msgid "Blog Settings"
+msgstr "Bloggalternativ"
+
+#: ../portal.php:122
 msgid "Settings saved."
 msgstr "Inställningarna sparades."
 

@@ -112,37 +112,37 @@ namespace Portal
 
       $blog = \WpMvc\Blog::find( $blog_id );
 
-      $blog->options->public->option_value = 1;
-      $blog->options->blog_public->option_value = 1;
+      $blog->option->public->option_value = 1;
+      $blog->option->blog_public->option_value = 1;
 
-      $blog->options->WPLANG->option_value = 'sv_SE';
-      $blog->options->timezone_string->option_value = 'Europe/Stockholm';
-      $blog->options->gmt_offset->option_value = 2;
+      $blog->option->WPLANG->option_value = 'sv_SE';
+      $blog->option->timezone_string->option_value = 'Europe/Stockholm';
+      $blog->option->gmt_offset->option_value = 2;
 
-      $blog->options->blogdescription->option_value = "En bloggare på {$current_site->domain}.";
-      $blog->options->users_can_register->option_value = 0;
-      $blog->options->ping_sites->option_value = '';
-      $blog->options->enable_app->option_value = 1;
-      $blog->options->enable_xmlrpc->option_value = 1;
+      $blog->option->blogdescription->option_value = "En bloggare på {$current_site->domain}.";
+      $blog->option->users_can_register->option_value = 0;
+      $blog->option->ping_sites->option_value = '';
+      $blog->option->enable_app->option_value = 1;
+      $blog->option->enable_xmlrpc->option_value = 1;
 
-      $blog->options->thumbnail_size_w->option_value = 128;
-      $blog->options->thumbnail_size_h->option_value =128;
-      $blog->options->thumbnail_crop->option_value = 1;
-      $blog->options->medium_size_w->option_value = 512;
-      $blog->options->medium_size_h->option_value = 512;
-      $blog->options->large_size_w->option_value = 1024;
-      $blog->options->large_size_h->option_value = 1024;
-      $blog->options->embed_size_w->option_value = 512;
-      $blog->options->embed_size_h->option_value = 512;
+      $blog->option->thumbnail_size_w->option_value = 128;
+      $blog->option->thumbnail_size_h->option_value =128;
+      $blog->option->thumbnail_crop->option_value = 1;
+      $blog->option->medium_size_w->option_value = 512;
+      $blog->option->medium_size_h->option_value = 512;
+      $blog->option->large_size_w->option_value = 1024;
+      $blog->option->large_size_h->option_value = 1024;
+      $blog->option->embed_size_w->option_value = 512;
+      $blog->option->embed_size_h->option_value = 512;
 
       $site = \WpMvc\Site::find( $current_site->id );
 
       $theme_stylesheet = $site->sitemeta->default_theme->meta_value;
       $theme_name = wp_get_theme( $site->sitemeta->default_theme->meta_value )->Name;
 
-      $blog->options->current_theme->option_value = $theme_name;
-      $blog->options->template->option_value = $theme_stylesheet;
-      $blog->options->stylesheet->option_value = $theme_stylesheet;
+      $blog->option->current_theme->option_value = $theme_name;
+      $blog->option->template->option_value = $theme_stylesheet;
+      $blog->option->stylesheet->option_value = $theme_stylesheet;
 
       $blog->save();
     }

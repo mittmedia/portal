@@ -46,7 +46,7 @@ load_plugin_textdomain('portal-settings', false, dirname(plugin_basename(__FILE_
 add_action( 'network_admin_menu', 'portal_add_pages' );
 function portal_add_pages()
 {
-  add_submenu_page( 'settings.php', 'Portal Settings', 'Portal', 'Super Admin', 'portal_settings', 'portal_settings_page');
+  add_submenu_page( 'settings.php', 'Portal Settings', 'Portal', 'manage_network', 'portal_settings', 'portal_settings_page');
 }
 
 function portal_settings_page()
@@ -74,7 +74,7 @@ function portal_reset_registration_on_blog()
 
   $blog = \WpMvc\Blog::find( $current_blog->blog_id );
 
-  $blog->options->users_can_register = 0;
+  $blog->option->users_can_register = 0;
 
   $blog->save();
 }
@@ -106,7 +106,7 @@ if ( isset( $_GET['portal_updated'] ) ) {
 
 function portal_updated_notice()
 {
-  $html = \WpMvc\ViewHelper::admin_notice( __( 'Settings saved.' ) );
+  $html = \WpMvc\ViewHelper::admin_notice( __( 'Settings saved.', 'portal-settings' ) );
 
   echo $html;
 }
