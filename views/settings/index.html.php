@@ -88,7 +88,8 @@ html;
       'type' => 'text',
       'object' => $site->sitemeta->portal_startpage,
       'default_value' => $site->sitemeta->portal_startpage->meta_value,
-      'key' => 'meta_value'
+      'key' => 'meta_value',
+      'description' => __('Specify the address with protocol but without the trailing slash, like so: http://myportal.example.com', 'portal-settings')
     ),
     array(
       'title' => __('Registration Settings', 'portal-settings'),
