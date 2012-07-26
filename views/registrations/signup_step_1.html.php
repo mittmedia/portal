@@ -1,5 +1,7 @@
 <?php global $errors; global $domain ?>
 
+<style>#content { display: none; } #content.show { display: block; }</style>
+
 <div id="content" class="widecolumn show">
   <div class="mu_register">
     <form id="mm_signupform" method="post" action="/wp-signup.php" enctype="multipart/form-data">
@@ -30,6 +32,7 @@
             <?php endif; ?>
             <input type="text" name="registration[last_name]" value="<?php echo isset( $_POST['registration']['last_name'] ) ? $_POST['registration']['last_name'] : ''; ?>" style="background: <?php echo in_array( "Last Name Incorrect", $errors ) ? "pink" : ""; ?>;" />
           </div>
+          <?php do_action('signup_portal_extra_fields'); ?>
           <!--<div class="field">
             <label><?php _e( "Street Address" ); ?></label>
             <?php if ( in_array( "Street Address Incorrect", $errors ) ): ?>

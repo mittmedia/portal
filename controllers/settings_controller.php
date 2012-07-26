@@ -85,8 +85,8 @@ namespace Portal
 
       $registration_options = array(
         'a' => \Portal\SettingsHelper::activation_option_to_text( 'a' ),
-        'b' => \Portal\SettingsHelper::activation_option_to_text( 'b' ),
-        'c' => \Portal\SettingsHelper::activation_option_to_text( 'c' )
+        'b' => \Portal\SettingsHelper::activation_option_to_text( 'b' )#,
+        #'c' => \Portal\SettingsHelper::activation_option_to_text( 'c' )
       );
 
       $this->render( $this, "index" );

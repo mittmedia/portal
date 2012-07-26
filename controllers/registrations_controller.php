@@ -20,7 +20,10 @@ namespace Portal
         $this->try_to_register();
       }
 
-      $this->render( $this, "signup_step_1" );
+      if ($site->sitemeta->activate_registration->meta_value == 'b')
+        $this->render( $this, "signup_step_1" );
+      else
+        $this->render( $this, "signup_deactivated" );
     }
 
     private function try_to_register()

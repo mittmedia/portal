@@ -1,0 +1,1 @@
+<style>#content { display: none; } #content.show { display: block; }</style>

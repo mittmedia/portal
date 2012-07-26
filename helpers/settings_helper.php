@@ -11,8 +11,8 @@ namespace Portal
           return 'No';
         case 'b':
           return 'Yes';
-        case 'c':
-          return 'Yes, but invitation only';
+        #case 'c':
+        #  return 'Yes, but invitation only';
       }
     }
 
@@ -23,8 +23,8 @@ namespace Portal
           return 'a';
         case 'Yes':
           return 'b';
-        case 'Yes, but invitation only':
-          return 'c';
+        #case 'Yes, but invitation only':
+        #  return 'c';
       }
     }
   }
