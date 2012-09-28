@@ -68,7 +68,7 @@ namespace Portal
       if ( \WpMvc\Blog::find_by_path("/$blog_name/") )
         $errors[] = "Blog Name Not Unique";
 
-      if ( \WpMvc\User::find_by_email("$email") )
+      if ( $email != "" && \WpMvc\User::find_by_email("$email") )
         $errors[] = "E-Mail Address Not Unique";
 
       if ( count( $errors ) == 0 ) {
@@ -161,7 +161,7 @@ namespace Portal
       $admin_email = $site->sitemeta->admin_email->meta_value;
 
       $message = sprintf(
-        __("Hi! Your blog over at %s was created. You may log in on %s/%s/wp-admin with the following credentials:\r\n\r\nUsername: %s\r\nPassword: %s\r\n\r\nPlease note! We strongly advice you to change the password upon your first login.\r\n\r\nGood luck with your blogging! In case anything were to break, please contact %s.", 'portal-settings'),
+        __("Hi! Your blog over at %s was created. You may log in on %s/%s/wp-admin with the following credentials:\n\nUsername: %s\nPassword: %s\n\nPlease note! We strongly advice you to change the password upon your first login.\n\nGood luck with your blogging! In case anything were to break, please contact %s.", 'portal-settings'),
         $domain,
         'http://' . $domain,
         $blog_name,
@@ -179,11 +179,11 @@ namespace Portal
       wp_mail(
         $admin_email ? $admin_email : 'dmu@mittmedia.se',
         sprintf(
-          __('A new blog was created'),
+          __('A new blog was created', 'portal-settings'),
           $blog_name
         ),
         sprintf(
-          __("A new blog was created. The user got this message from us:\r\n\r\n%s", 'portal-settings'),
+          __("A new blog was created. The user got this message from us:\n\n%s", 'portal-settings'),
           $message
         )
       );

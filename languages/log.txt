@@ -1,27 +1,4 @@
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:161: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:183: internationalized messages should not contain the `\r' escape sequence
-11:08:53: ../controllers/registrations_controller.php:183: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:52: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poedittVlohJ:52: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:36: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:52: internationalized messages should not contain the `\r' escape sequence
-11:08:53: /var/folders/hg/r9sjr04s3kqd5psjh4vntp4h0000gn/T/poeditwGOmgD:52: internationalized messages should not contain the `\r' escape sequence
+10:14:21: /Applications/Poedit.app/Contents/MacOS/xgettext: Non-ASCII string at ../views/registrations/signup_deactivated.html.php:3.
+10:14:21:                                                   Please specify the source encoding through --from-code.
+10:14:21: Poster i katalogen är troligen inkorrekta.
+10:14:21: Kataloguppdatering misslyckades. Klicka på 'Mera >>' för detaljer.
